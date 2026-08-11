@@ -1,14 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
-unsigned char code[] = "$CODE";
 
 int main(int argc, char* argv){
-    unsigned char* payload;
-    int len = sizeof(code);
-    memcpy(payload, code, len); 
+    unsigned char code[] = "$CODE";
 
-    ((int (*)())payload)();
+    ((int (*)())code)();
 
     return 0;
 }
